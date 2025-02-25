@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/exercise-tracker-app/static/css/main.aa74c327.css",
+    "main.js": "/exercise-tracker-app/static/js/main.e8ffa074.js",
+    "static/js/453.e1540f4e.chunk.js": "/exercise-tracker-app/static/js/453.e1540f4e.chunk.js",
+    "index.html": "/exercise-tracker-app/index.html",
+    "main.aa74c327.css.map": "/exercise-tracker-app/static/css/main.aa74c327.css.map",
+    "main.e8ffa074.js.map": "/exercise-tracker-app/static/js/main.e8ffa074.js.map",
+    "453.e1540f4e.chunk.js.map": "/exercise-tracker-app/static/js/453.e1540f4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa74c327.css",
+    "static/js/main.e8ffa074.js"
+  ]
+}
