@@ -1,0 +1,98 @@
+.exercise-container {
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    left: 10px;
+  }
+  
+  .exercise-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .timer-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+  
+  .best-time, .average-time {
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .start-button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .stop-button {
+    background: red;
+    color: white;
+  }
+  
+  .reset-button {
+    background: gray;
+    color: white;
+  }
+  
+  .attempt-list {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .attempt-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .attempt-list li {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .exercise-media {
+    background: #e0e0e0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  

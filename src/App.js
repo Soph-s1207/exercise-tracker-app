@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RepetitionExercise from "./components/RepetitionExercise";
 import DurationExercise from "./components/DurationExercise";
+import BalanceExercise from "./components/BalanceExercise";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     { name: "Jumping Jacks", type: "repetition", description: "Some description about jumping jacks" },
     { name: "Running", type: "duration", description: "Some description about running" },
     { name: "Sit Ups", type: "repetition", description: "Some description about sit ups" },
+    { name: "Balance", type: "balance",  description: "Some description about balance" },  // New exercise type
   ];
 
   return (
@@ -21,19 +23,22 @@ function App() {
         <div className="exercise-list">
           {exercises.map((exercise, index) => (
             <div key={index} className="exercise-card">
-              <div className="exercise-image-placeholder" />
-              <div className="exercise-details">
-                <h2>{exercise.name}</h2>
-                <p>{exercise.description}</p>
-                <button onClick={() => setSelectedExercise(exercise)}>Start</button>
-              </div>
+              <h2>{exercise.name}</h2>
+              <p>{exercise.description}</p>
+              <button onClick={() => setSelectedExercise(exercise)}>Start</button>
             </div>
           ))}
         </div>
-      ) : selectedExercise.type === "repetition" ? (
-        <RepetitionExercise name={selectedExercise.name} goBack={() => setSelectedExercise(null)} />
       ) : (
-        <DurationExercise name={selectedExercise.name} goBack={() => setSelectedExercise(null)} />
+        selectedExercise && selectedExercise.type === "repetition" ? (
+          <RepetitionExercise name={selectedExercise.name} goBack={() => setSelectedExercise(null)} />
+        ) : selectedExercise.type === "duration" ? (
+          <DurationExercise name={selectedExercise.name} goBack={() => setSelectedExercise(null)} />
+        ) : selectedExercise.type === "balance" ? (
+          <BalanceExercise name={selectedExercise.name} goBack={() => setSelectedExercise(null)} />
+        ) : (
+          <div>Error: Invalid Exercise Type</div>
+        )
       )}
     </div>
   );
